@@ -1,0 +1,7 @@
+C:\GitHub\OnlineTestSystem\OnlineTestSystemApp\bin\Debug\OnlineTestSystemApp.exe.config
+C:\GitHub\OnlineTestSystem\OnlineTestSystemApp\bin\Debug\OnlineTestSystemApp.exe
+C:\GitHub\OnlineTestSystem\OnlineTestSystemApp\bin\Debug\OnlineTestSystemApp.pdb
+C:\GitHub\OnlineTestSystem\OnlineTestSystemApp\obj\Debug\OnlineTestSystemApp.csprojResolveAssemblyReference.cache
+C:\GitHub\OnlineTestSystem\OnlineTestSystemApp\obj\Debug\OnlineTestSystemApp.csproj.CoreCompileInputs.cache
+C:\GitHub\OnlineTestSystem\OnlineTestSystemApp\obj\Debug\OnlineTestSystemApp.exe
+C:\GitHub\OnlineTestSystem\OnlineTestSystemApp\obj\Debug\OnlineTestSystemApp.pdb
