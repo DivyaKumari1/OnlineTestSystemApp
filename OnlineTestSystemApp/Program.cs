@@ -50,6 +50,7 @@ namespace OnlineTestSystemApp
                 Console.WriteLine("2.Answer the Question");
                 Console.WriteLine("3. Total Number of correct Answers");
                 Console.WriteLine("4.Total Number of Incorrect Answers");
+                Console.WriteLine("5.print all questions");
                 Console.Write("please select an option from above");
                 var choice = Console.ReadLine();
 
@@ -80,6 +81,18 @@ namespace OnlineTestSystemApp
                         Console.WriteLine($"QN: {question.QuestionNumber}, QT: {question.QuestionText}, o1: {question.option1}, o2: {question.option2}, o3:  {question.option3}, o4:  {question.option1}, ma: {question.MarkedOption}, ca: {question.correctOption}, evaluate: {question.isAnsweredCorrect}");
 
 
+                        break;
+                    case "5":
+                        Console.Write("enter roll number: ");
+                        rollNumber = int.Parse(Console.ReadLine());
+
+                        var questions= Test.GetAllQuestions(rollNumber);
+                        foreach( var q in questions)
+                        {
+                            Console.WriteLine($"QN: {q.QuestionNumber}, QT: {q.QuestionText}, o1: {q.option1}, o2: {q.option2}, o3:  {q.option3}, o4:  {q.option1}, ma: {q.MarkedOption}, ca: {q.correctOption}, evaluate: {q.isAnsweredCorrect}");
+
+
+                        }
                         break;
 
 

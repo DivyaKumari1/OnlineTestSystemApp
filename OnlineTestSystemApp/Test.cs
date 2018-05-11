@@ -8,6 +8,7 @@ namespace OnlineTestSystemApp
 {
     public static class Test
     {
+        private static List<Question> questions = new List<Question>();
         /// <summary>
         /// This creates question for test
         /// </summary>
@@ -20,6 +21,7 @@ namespace OnlineTestSystemApp
         /// <param name="markedOption">marked option</param>
         /// <param name="rollNumber">roll number</param>
         /// <returns></returns>
+       
         public static Question CreateQuestion(string QuestionText, string option1, string option2, string option3, string option4, int correctOption, int markedOption,int rollNumber)
         {
             var question = new Question
@@ -28,6 +30,7 @@ namespace OnlineTestSystemApp
                 MarkedOption = markedOption.ToString(),
 
             };
+            questions.Add(question);
             
              question.Evaluate();
             
@@ -43,6 +46,10 @@ namespace OnlineTestSystemApp
             return question;
 
 
+        }
+        public static IEnumerable<Question> GetAllQuestions(int rollNumber)
+        {
+            return questions.Where(q => q.RollNumber == rollNumber);
         }
 
     }
