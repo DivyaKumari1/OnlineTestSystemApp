@@ -5,3 +5,13 @@ C:\GitHub\OnlineTestSystem\OnlineTestSystemApp\obj\Debug\OnlineTestSystemApp.csp
 C:\GitHub\OnlineTestSystem\OnlineTestSystemApp\obj\Debug\OnlineTestSystemApp.csproj.CoreCompileInputs.cache
 C:\GitHub\OnlineTestSystem\OnlineTestSystemApp\obj\Debug\OnlineTestSystemApp.exe
 C:\GitHub\OnlineTestSystem\OnlineTestSystemApp\obj\Debug\OnlineTestSystemApp.pdb
+C:\GitHub\OnlineTestSystem\OnlineTestSystemApp\bin\Debug\EntityFramework.dll
+C:\GitHub\OnlineTestSystem\OnlineTestSystemApp\bin\Debug\EntityFramework.SqlServer.dll
+C:\GitHub\OnlineTestSystem\OnlineTestSystemApp\bin\Debug\EntityFramework.xml
+C:\GitHub\OnlineTestSystem\OnlineTestSystemApp\bin\Debug\EntityFramework.SqlServer.xml
+C:\GitHub\OnlineTestSystem\OnlineTestSystemApp\obj\Debug\OnlineTestSystemApp.Migrations.InitialCreate.resources
+C:\GitHub\OnlineTestSystem\OnlineTestSystemApp\obj\Debug\OnlineTestSystemApp.csproj.GenerateResource.Cache
+C:\GitHub\OnlineTestSystem\OnlineTestSystemApp\obj\Debug\OnlineTestSystemApp.Migrations.Questions.resources
+C:\GitHub\OnlineTestSystem\OnlineTestSystemApp\obj\Debug\OnlineTestSystemApp.Migrations.Questionset.resources
+C:\GitHub\OnlineTestSystem\OnlineTestSystemApp\obj\Debug\OnlineTestSystemApp.Migrations.Que11.resources
+C:\GitHub\OnlineTestSystem\OnlineTestSystemApp\obj\Debug\OnlineTestSystemApp.Migrations.Ques12.resources

@@ -8,7 +8,8 @@ namespace OnlineTestSystemApp
 {
     public static class Test
     {
-        private static List<Question> questions = new List<Question>();
+        private static TestModel db = new TestModel();
+        // private static List<Question> questions = new List<Question>();
         /// <summary>
         /// This creates question for test
         /// </summary>
@@ -19,37 +20,51 @@ namespace OnlineTestSystemApp
         /// <param name="option4">option4</param>
         /// <param name="correctOption">correct option</param>
         /// <param name="markedOption">marked option</param>
-        /// <param name="rollNumber">roll number</param>
+        /// <param name="emailId">roll number</param>
         /// <returns></returns>
-       
-        public static Question CreateQuestion(string QuestionText, string option1, string option2, string option3, string option4, int correctOption, int markedOption,int rollNumber)
+
+        public static Question CreateQuestion(string QuestionText, int option1, int option2, int  option3, int  option4, int correctOption, int markedOption,string emailId)
         {
             var question = new Question
             {
-                RollNumber = rollNumber,
-                MarkedOption = markedOption.ToString(),
-
+                QuestionText = QuestionText,
+                Option1 =option1,
+                Option2 = option2,
+                Option3 = option3,
+                Option4 = option4,
+                EmailId = emailId,
+                CorrectOption = correctOption,
+                MarkedOption = markedOption,
             };
-            questions.Add(question);
             
-             question.Evaluate();
-            
-            // Print whether correct or wrong
-            if (question.isAnsweredCorrect == true)
-            {
-                Console.WriteLine("Correct!!");
-            }
-            else
-            {
-                Console.WriteLine($"Incorrect. The correct option is {question.correctOption}");
-            }
+            // questions.Add(question);
+            question.AnswerTheQuestion(markedOption);
+            question.Evaluate();
+          
+            db.Questions.Add(question);
+            db.SaveChanges();
+
+
+
+
+            //question.Evaluate();
+
+            //Print whether correct or wrong
+            //if (question.isAnsweredCorrect == true)
+            //{
+            //    Console.WriteLine("Correct!!");
+            //}
+            //else
+            //{
+            //    Console.WriteLine($"Incorrect. The correct option is {question.correctOption}");
+            //}
             return question;
 
 
         }
-        public static IEnumerable<Question> GetAllQuestions(int rollNumber)
+        public static IEnumerable<Question> GetAllQuestions(string emailId)
         {
-            return questions.Where(q => q.RollNumber == rollNumber);
+            return db.Questions.Where(q => q.EmailId == emailId);
         }
 
     }
