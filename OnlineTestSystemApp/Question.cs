@@ -10,10 +10,10 @@ namespace OnlineTestSystemApp
 
     public class Question
     {
-        private static int lastQuestionNumber = 1;
+       // private static int lastQuestionNumber = 1;
 
         [Key]
-        public int QuestionNumber { get; private set; }
+        public int QuestionNumber { get; set; }
        
         public string EmailId { get; set; }
 
@@ -39,17 +39,17 @@ namespace OnlineTestSystemApp
         [Required]
         public int  MarkedOption { get; set; }
 
-        //[Required]
+        
         public bool? isAnsweredCorrect { get; set; }
 
-        public DateTime CreatedDate { get; private set; }
+        public DateTime CreatedDate { get;  set; }
 
-        public Question()
-        {
-            QuestionNumber = lastQuestionNumber++;
-            CreatedDate = DateTime.UtcNow;
+        //public Question()
+        //{
+        //    QuestionNumber = lastQuestionNumber++;
+        //    CreatedDate = DateTime.UtcNow;
 
-        }
+        //}
 
         public void AnswerTheQuestion(int markedOption)
         {
@@ -67,6 +67,8 @@ namespace OnlineTestSystemApp
                 isAnsweredCorrect = false;
             }
         }
+        
+
     }
 
 }

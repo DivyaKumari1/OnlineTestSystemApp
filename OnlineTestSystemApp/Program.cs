@@ -81,16 +81,19 @@ namespace OnlineTestSystemApp
                         var question = Test.CreateQuestion(questionText, option1, option2, option3, option4, correctOption, markedOption, emailId);
                         Console.WriteLine($"QN: {question.QuestionNumber}, QT: {question.QuestionText}, 1: {question.Option1}, 2: {question.Option2}, 3:  {question.Option3}, 4:  {question.Option4}, MarkedAnswer: {question.MarkedOption}, CorrectAnswer: {question.CorrectOption}");
 
-                        if (question.MarkedOption == question.CorrectOption)
-                        {
-                            Console.WriteLine("true");
+                        //if (question.MarkedOption == question.CorrectOption)
+                        //{
+                        //    Console.WriteLine("true");
 
-                        }
-                        else
-                        {
-                            Console.WriteLine("false");
+                        //}
+                        //else
+                        //{
+                        //    Console.WriteLine("false");
 
-                        }
+                        //}
+                    
+
+                        
 
 
 
@@ -108,6 +111,9 @@ namespace OnlineTestSystemApp
 
 
                         break;
+                    case "3":
+
+                        break;
                     case "5":
                         PrintAllQuestions();
                         //Console.Write("Enter email Id: ");
@@ -121,7 +127,7 @@ namespace OnlineTestSystemApp
 
                         //}
                         break;
-
+                    
 
 
 

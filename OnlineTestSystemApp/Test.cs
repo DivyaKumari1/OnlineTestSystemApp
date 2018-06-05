@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -40,6 +41,7 @@ namespace OnlineTestSystemApp
             // questions.Add(question);
             question.AnswerTheQuestion(markedOption);
             question.Evaluate();
+            
           
             db.Questions.Add(question);
             db.SaveChanges();
@@ -65,6 +67,27 @@ namespace OnlineTestSystemApp
         public static IEnumerable<Question> GetAllQuestions(string emailId)
         {
             return db.Questions.Where(q => q.EmailId == emailId);
+        }
+
+        public static Question GetAllQuestionDetails(int questionNumber)
+        {
+            return db.Questions.Find(questionNumber);
+        }
+        public static Question EditQuestion(Question question)
+        {
+            var UpdatedQuestion = GetAllQuestionDetails(question.QuestionNumber);
+              UpdatedQuestion.QuestionText = question.QuestionText;
+            UpdatedQuestion.Option1 = question.Option1;
+            UpdatedQuestion.Option2 = question.Option2;
+            UpdatedQuestion.Option3 = question.Option3;
+            UpdatedQuestion.Option4 = question.Option4;
+            UpdatedQuestion.MarkedOption = question.MarkedOption;
+            UpdatedQuestion.EmailId = question.EmailId;
+
+
+            db.Entry(UpdatedQuestion).CurrentValues.SetValues(UpdatedQuestion);
+            db.SaveChanges();
+            return UpdatedQuestion;
         }
 
     }

@@ -1,0 +1,98 @@
+﻿@model OnlineTestSystemApp.Question
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Question</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.EmailId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EmailId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.QuestionText)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.QuestionText)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Option1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Option1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Option2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Option2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Option3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Option3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Option4)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Option4)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CorrectOption)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CorrectOption)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MarkedOption)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MarkedOption)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.isAnsweredCorrect)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.isAnsweredCorrect)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreatedDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreatedDate)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.QuestionNumber }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
